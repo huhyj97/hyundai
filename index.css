@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0px solid silver;
+  outline: none;
+}
+
+img {
+  width: 100px;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.1px;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 900;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 2.3rem;
+  line-height: 3rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+}
+
+h5 {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+h6 {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+  color: #cfb997;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  font-family: 'Noto Sans KR', serif;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  padding: 0.8rem 2rem;
+  background: #002c5e;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover,
+button:active {
+  background: #000;
+}
+
+mark {
+  color: #002c5e;
+  background: linear-gradient(to top, #ccc 50%, transparent 50%);
+}
+
+/*~~~~start~~~~*/
+/* header */
+header {
+  padding: 25px 5%;
+  font-weight: 700;
+  background: #fff;
+}
+
+header section {
+  display: flex;
+  justify-content: space-between;
+}
+
+header section img {
+  width: 150px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.pc-header, .pc-header2 {
+  display: none;
+}
+
+/* main */
+main {
+  min-width: 360px;
+  height: 100vh;
+}
+
+.container {
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: 500%;
+  height: 100%;
+  transition: all 0.25s ease-in;
+  transform: translateX(0);
+}
+
+.slider .box {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider .box .bg {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, .2);
+  width: 55%;
+  transform: skewX(7deg);
+  position: absolute;
+  height: 100%;
+  left: -10%;
+  padding-left: 20rem;
+  transform-origin: 0 100%;
+}
+
+.slider .box .bg::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: inherit;
+  pointer-events: none;
+  transform: skewX(10deg);
+}
+
+.slider .box .details {
+  text-align: center;
+  transform: translateY(-5rem);
+  color: #fff;
+  padding-left: 5%;
+}
+
+.slider .box .details h1 {
+  font-weight: 500;
+}
+
+.slider .box .details p {
+  font-size: 1rem;
+  padding: 20px 0;
+  padding-bottom: 40px;
+}
+
+.slider .box1 {
+  background: url('https://www.hyundai.com/contents/repn-car/key-visual/homepage/pc/avante-n-21lc-w.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider .box2 {
+  background: url('https://www.hyundai.com/contents/repn-car/key-visual/homepage/pc/kona-n-w.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider .box3 {
+  background: url('https://www.hyundai.com/contents/repn-car/key-visual/homepage/pc/sonata-n-line-21my-w.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider .box4 {
+  background: url('https://casper.hyundai.com/_nuxt/img/rear_02.8203faa.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.slider .box5 {
+  background: url('https://www.genesis.com/content/dam/genesis-p2/kr/assets/main/g80-sport/g80-sport-image-launching-2-pc-1920x1080-kr.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.trail {
+  position: absolute;
+  bottom: 13%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.trail div {
+  padding: 1rem;
+  border-top: 3px solid #fff;
+  cursor: pointer;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.trail div:hover {
+  opacity: 0.6;
+}
+
+.active {
+  opacity: 1 !important;
+}
+
+.prev,
+.next {
+  display: none;
+  margin: 0 3%;
+}
+
+/* new */
+.new {
+  position: relative;
+  margin: 150px 0;
+  overflow-x: hidden;
+}
+
+.new h1 {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  color: #002c5e;
+  padding-top: 20px;
+}
+
+.new section {
+  padding: 150px 0;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.new section> :nth-child(1) img {}
+
+.new section> :nth-child(1)> :nth-child(1) {
+  width: 120%;
+  margin-left: -30%;
+  margin-top: 0;
+}
+
+.new section> :nth-child(1)> :nth-child(2) text {
+  font-size: 3rem;
+  letter-spacing: 1rem;
+}
+
+.new section> :nth-child(1)> :nth-child(3) {
+  width: 100%;
+  margin-right: -30%;
+  height: auto;
+}
+
+.new section h4 {
+  line-height: 2rem;
+  margin: 4rem 0;
+}
+
+.new> :nth-child(3) {
+  background: #002c5e;
+  color: #fff;
+  padding: 7rem 5%;
+  text-align: center;
+}
+
+.new> :nth-child(3) h4 {
+  width: 250px;
+  line-height: 2rem;
+  margin: 0 auto;
+}
+
+.new> :nth-child(3) div {
+  display: flex;
+  justify-content: center;
+}
+
+.new> :nth-child(3) span {
+  margin: 3rem 1rem;
+}
+
+.new> :nth-child(3) span img {
+  background: #fff;
+  margin-bottom: 1rem;
+}
+
+/* best */
+.best {
+  padding: 0 5%;
+  margin: 150px auto;
+}
+
+.best h1 {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  color: #002c5e;
+  text-align: center;
+}
+
+.best .single button {
+  background: #fff;
+  color: #002c5e;
+  border: 3px solid #002c5e;
+  padding: 0.5rem 2rem;
+  margin-top: 2rem;
+}
+
+.last-slider .single {
+  width: 100%;
+  height: 500px;
+  margin: 1rem 0 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.last-slider .single img {
+  width: 110%;
+  height: 50%;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  background: none;
+}
+
+.slick-arrow {
+  background: none;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  display: block;
+  top: 48%;
+  margin-top: -10px;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 0;
+  z-index: 5;
+  border-top: 3px solid #002c5e;
+  border-right: 3px solid #002c5e;
+  transition: 0.8s;
+}
+
+.slick-arrow:hover {
+  background: none;
+}
+
+.slick-prev {
+  left: 0%;
+  transform: rotate(225deg);
+}
+
+.slick-next {
+  right: 0%;
+  transform: rotate(45deg);
+}
+
+/* brand */
+.brand {
+  background: url('https://www.hyundai.com/content/dam/hyundai/kr/ko/images/brand/brandstory/mordern-premium/brand-philosophy-keyvisual-m.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 8rem 0 20rem 0;
+}
+
+.brand section {
+  text-align: left;
+  padding: 0 5%;
+}
+
+.brand section mark,
+.brand section p {
+  color: #fff;
+}
+
+.brand section mark {
+  background: linear-gradient(to top, #666 50%, transparent 50%);
+}
+
+.brand section p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 1.8rem;
+}
+
+/* footer */
+footer {
+  padding: 4rem 5%;
+  background: #1C1B1B;
+  color: #ccc;
+}
+
+footer button {
+  width: 240px;
+  background: none;
+  padding: 1rem 2rem 1rem 0;
+  border-bottom: 3px solid #fff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: left;
+}
+
+footer button:hover {
+  background: none;
+}
+
+.foot-1 div {
+  margin: 1rem 0;
+}
+
+.foot-1 div ul {
+  display: flex;
+  color: #fff;
+  font-weight: bold;
+}
+
+.foot-1 div ul li,
+.foot-1 div span {
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+.foot-icon img {
+  width: 60px;
+  margin: 4rem 0 2rem 0;
+  cursor: pointer;
+}
+
+.foot-2 {
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  padding: 4rem 0;
+}
+
+.foot-2> :nth-child(1){
+  margin-bottom: 3rem;
+}
+
+.foot-2 dl {
+  margin-bottom: 1.5rem;
+}
+
+.foot-2 dl dt {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.foot-2 dl dd span {
+  padding-right: 1rem;
+  line-height: 1.5rem;
+}
+
+footer> :last-child {
+  margin-top: 3rem;
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+  h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  /* labtop-header */
+  header section img {
+    margin-top: 10px;
+  }
+
+  .pc-header, .pc-header2 {
+    display: flex;
+  }
+
+  .pc-header li, .pc-header2 li {
+    font-size: 1rem;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  /* labtop-main */
+  .slider .box .details {
+    padding: 5rem;
+    padding-left: 10rem;
+    z-index: 100;
+    grid-column: 1 / span 1;
+    grid-row: -1;
+  }
+
+  .prev,
+  .next,
+  .trail {
+    z-index: 10000;
+    position: absolute;
+  }
+
+  .prev,
+  .next {
+    display: block;
+    width: 4rem;
+    cursor: pointer;
+    opacity: 0.2;
+    transition: all 0.3s ease;
+  }
+
+  .prev:hover,
+  .next:hover {
+    opacity: 1;
+  }
+
+  .prev {
+    top: 50%;
+    left: 2%;
+    transform: translateY(-50%);
+  }
+
+  .next {
+    top: 50%;
+    right: 2%;
+    transform: translateY(-50%);
+  }
+
+  .trail {
+    width: 60%;
+    font-size: 1.5rem;
+  }
+
+  /* labtop-new */
+
+  .new section> :nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .new section> :nth-child(1)> :nth-child(1) {
+    width: 40%;
+    height: 50%;
+    margin-left: -10%;
+  }
+
+  .new section> :nth-child(1)> :nth-child(2) {
+    width: 30%;
+  }
+
+  .new section> :nth-child(1)> :nth-child(3) {
+    width: 40%;
+    margin-right: -10%;
+    margin-top: 10rem;
+    height: 50%;
+  }
+
+  /* labtop-best */
+  .last-slider .single img {
+    width: 100%;
+    height: 300px;
+    transition: .3s;
+  }
+
+  .last-slider .single img:hover {
+    transform: scale(1.1);
+  }
+
+  .slick-arrow {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* labtop-brand */
+  .brand {
+    background: url('https://www.hyundai.com/content/dam/hyundai/kr/ko/images/brand/brandstory/mordern-premium/brand-philosophy-keyvisual-w.jpg') no-repeat;
+    background-size: cover;
+    padding-top: 6rem;
+  }
+
+
+  .brand section p {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+  }
+
+  /* labtop-footer */
+  .foot-1,
+  .foot-2 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .foot-2 div {
+    margin-bottom: 0;
+    width: 50%;
+  }
+
+}
