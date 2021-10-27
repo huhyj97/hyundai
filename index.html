@@ -244,7 +244,7 @@
           responsive: [
 
             {
-              breakpoint: 800,
+              breakpoint: 1280,
               settings: {
                 slidesToShow: 2,
                 slidesToScroll: 2,
@@ -255,7 +255,7 @@
 
 
             {
-              breakpoint: 600,
+              breakpoint: 760,
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -280,15 +280,136 @@
 
   <article class="brand">
     <section>
+      <h4>ABOUT BRAND</h4>
+      <h2>브랜드 철학</h2>
       <p>우리는 모든 인류의<br><mark>더 나아진 삶</mark>을 위해,<br><mark>더 나은 방향</mark>의 진보를 시작합니다.</p>
     </section>
   </article>
 
 
   <article class="counsel">
+    <div>
+      <h1><mark>시승 & 상담신청</mark></h1>
+      <img src="https://www.hyundai.com/static/images/pic_testdriving.png">
+      <h5>현대자동차에서 제공하는 편리한 시승신청 서비스를 이용해보세요.</h5>
+    </div>
+
+    <div class="title">
+      <h4>개인정보 입력</h4>
+    </div>
+
+    <section>
+      <div class="form-item">
+        <label for="name">신청자 성명*</label>
+        <input type="text" placeholder="이름을 입력해주세요."></input>
+      </div>
+
+      <div class="form-item">
+        <label for="car">현재보유 차량모델</label>
+        <input type="text" placeholder="보유차량을 입력해주세요."></input>
+      </div>
+
+      <div class="form-item">
+        <label for="birth">출생년도*</label>
+        <select>
+          <option checked>1960</option>
+          <option>1970</option>
+          <option>1980</option>
+          <option>1990</option>
+          <option>2000</option>
+          <option>2010</option>
+        </select>
+      </div>
+
+      <div class="form-item">
+        <label for="tel">연락처*</label>
+        <input type="tel" placeholder="'-'없이 입력해주세요."></input>
+      </div>
+
+      <div class="form-item">
+        <label for="car">전시장 선택*</label>
+        <select>
+          <option checked>지역</option>
+          <option>서울특별시</option>
+          <option>경기도</option>
+          <option>인천광역시</option>
+          <option>강원도</option>
+          <option>충청도</option>
+          <option>전라도</option>
+          <option>경상도</option>
+          <option>제주특별자치도</option>
+        </select>
+
+        <select>
+          <option checked>시/군/구</option>
+          <option>강남구</option>
+          <option>강동구</option>
+          <option>강북구</option>
+          <option>노원구</option>
+          <option>도봉구</option>
+          <option>마포구</option>
+          <option>송파구</option>
+        </select>
+
+        <select>
+          <option checked>전시장</option>
+          <option>강남 대치 전시장</option>
+          <option>강남 신사 전시장(City Store)</option>
+        </select>
+      </div>
+
+      <div class="form-item">
+        <label for="purchase">구매시기*</label>
+        <label for="radioa" class="input-control radio">
+          <input type="radio" id="radioa" name="radio" value="radio-value">
+          <span class="input-control__indicator"></span> ~3개월
+        </label>
+        <label for="radiob" class="input-control radio">
+          <input type="radio" id="radiob" name="radio" value="radio-value">
+          <span class="input-control__indicator"></span> ~6개월
+        </label>
+        <label for="radioc" class="input-control radio">
+          <input type="radio" id="radioc" name="radio" value="radio-value">
+          <span class="input-control__indicator"></span> ~1년
+        </label>
+        <label for="radiod" class="input-control radio">
+          <input type="radio" id="radiod" name="radio" value="radio-value">
+          <span class="input-control__indicator"></span> ~2년
+        </label>
+      </div>
+
+      <div class="form-item">
+        <label for="date">시승/상담 희망일*</label>
+        <input type="date"></input>
+      </div>
+    </section>
+
+    <div class="title">
+      <h4>개인정보 수집·이용·제공 동의</h4>
+    </div>
+
+    <section>
+      <div class="form-group">
+        <input type="checkbox" id="box-1">
+        <label for="box-1">개인정보 수집 및 이용동의(필수) *</label>
+
+        <input type="checkbox" id="box-2">
+        <label for="box-2">개인정보 제3자 제공 동의(필수) *</label>
+
+        <input type="checkbox" id="box-3">
+        <label for="box-3">개인정보 마케팅목적 수집 및 이용 동의(선택)</label>
+
+        <input type="checkbox" id="box-4">
+        <label for="box-4">영리목적 광고성 정보 수신에 대한 동의(선택)</label>
+      </div>
+    </section>
+
+    <button type="submit">시승&상담 신청 완료</button>
   </article>
 
   <article class="now">
+
+  </article>
 
 
     <footer>
